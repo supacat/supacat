@@ -1,11 +1,11 @@
-import "./global.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import { Analytics } from "@vercel/analytics/react";
-import { SpeedInsights } from "@vercel/speed-insights/next";
-import Footer from "@/components/footer";
-import Header from "@/components/header";
+
 import { baseUrl } from "@/app/sitemap";
+import { Header } from "@/components/header";
+import { cn } from "@/lib/utils";
+
+import "../styles/globals.css";
 
 export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),
@@ -35,8 +35,6 @@ export const metadata: Metadata = {
   },
 };
 
-const cx = (...classes) => classes.filter(Boolean).join(" ");
-
 const inter = Inter({
   subsets: ["latin"],
   display: "swap",
@@ -50,13 +48,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={cx("bg-gray-100 font-sans", inter.variable)}>
-        <main className="mx-auto max-w-[692px] overflow-x-hidden px-6 flex gap-8 flex-col py-12 text-gray-1200 antialiased sm:py-32 md:overflow-x-visible md:py-16">
+      <body className={cn("bg-white font-sans", inter.variable)}>
+        <main className="mx-auto flex max-w-[692px] flex-col gap-8 overflow-x-hidden px-6 py-12 text-gray-1200 antialiased sm:py-32 md:overflow-x-visible md:py-16">
           <Header />
           {children}
-          <Footer />
-          <Analytics />
-          <SpeedInsights />
         </main>
       </body>
     </html>
