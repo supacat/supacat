@@ -17,7 +17,7 @@ export default function Page() {
         transition={{ duration: ANIMATION_DURATION }}
       >
         <div className="mb-6">
-          <p className="text-gray-1100 leading-relaxed">
+          <p className="text-foreground leading-relaxed">
             We create software to help people because it's fulfilling and we're
             passionate about it. We believe that's the best reason to do
             anything.
@@ -30,28 +30,25 @@ export default function Page() {
         transition={{ duration: ANIMATION_DURATION, delay: 0.1 }}
       >
         <div className="mb-4">
-          <h2 className="font-medium text-gray-1200 text-lg">Projects</h2>
+          <h2 className="font-medium text-foreground text-lg">Projects</h2>
         </div>
         <div className="space-y-1">
           <a
             className={cn(
-              "group -mx-3 block rounded-lg px-3 py-2 transition-colors hover:bg-gray-50"
+              "flex items-start gap-3 rounded-2xl transition-colors hover:bg-gray-100 p-4 -mx-4 group"
             )}
-            href="https://www.mystudios.ai"
+            href="https://www.uselockin.app"
             rel="noopener noreferrer"
             target="_blank"
           >
-            <div className="flex items-center justify-between">
-              <div className="min-w-0 flex-1">
-                <div className="flex items-center gap-2">
-                  <span className="font-medium text-gray-1200 group-hover:text-gray-900">
-                    MyStudios
-                  </span>
-                  <ArrowUpRight className="h-4 w-4 text-gray-700 opacity-60 transition-opacity group-hover:opacity-100" />
-                </div>
-                <p className="text-gray-800 text-sm">AI Studio Photo</p>
-              </div>
+
+            <div className="flex flex-1 flex-col gap-y-1 text-sm">
+                  <h3 className="font-medium">
+                    Lock In
+                  </h3>
+                <p className="text-gray-500">Track daily habits with lock in challenges and maintain your streaks</p>
             </div>
+            <ArrowUpRight className="h-5 w-5 shrink-0 opacity-0 group-hover:opacity-100 transition-opacity" />
           </a>
         </div>
       </motion.section>
@@ -66,43 +63,37 @@ export default function Page() {
         <div className="space-y-1">
           <a
             className={cn(
-              "group -mx-3 block rounded-lg px-3 py-2 transition-colors hover:bg-gray-50"
+              "flex items-start gap-3 rounded-2xl transition-colors hover:bg-gray-100 p-4 -mx-4 group"
             )}
             href="https://merch.supacat.io"
             rel="noopener noreferrer"
             target="_blank"
           >
-            <div className="flex items-center justify-between">
-              <div className="min-w-0 flex-1">
-                <div className="flex items-center gap-2">
-                  <span className="font-medium text-gray-1200 group-hover:text-gray-900">
+
+            <div className="flex flex-1 flex-col gap-y-1 text-sm">
+                  <h3 className="font-medium">
                     Merch
-                  </span>
-                  <ArrowUpRight className="h-4 w-4 text-gray-700 opacity-60 transition-opacity group-hover:opacity-100" />
-                </div>
-                <p className="text-gray-800 text-sm">
+                  </h3>
+                <p className="text-gray-500">
                   Official Supacat merchandise and apparel
                 </p>
               </div>
-            </div>
+            <ArrowUpRight className="h-5 w-5 shrink-0 opacity-0 group-hover:opacity-100 transition-opacity" />
           </a>
           <a
             className={cn(
-              "group -mx-3 block rounded-lg px-3 py-2 transition-colors hover:bg-gray-50"
+              "flex items-start gap-3 rounded-2xl transition-colors hover:bg-gray-100 p-4 -mx-4 group"
             )}
             href="mailto:julien@supacat.io"
           >
-            <div className="flex items-center justify-between">
-              <div className="min-w-0 flex-1">
-                <div className="flex items-center gap-2">
-                  <span className="font-medium text-gray-1200 group-hover:text-gray-900">
+
+            <div className="flex flex-1 flex-col gap-y-1 text-sm">
+                  <h3 className="font-medium">
                     Get in touch
-                  </span>
-                  <ArrowUpRight className="h-4 w-4 text-gray-700 opacity-60 transition-opacity group-hover:opacity-100" />
-                </div>
-                <p className="text-gray-800 text-sm">julien@supacat.io</p>
-              </div>
+                  </h3>
+                <p className="text-gray-500">julien@supacat.io</p>
             </div>
+            <ArrowUpRight className="h-5 w-5 shrink-0 opacity-0 group-hover:opacity-100 transition-opacity" />
           </a>
         </div>
       </motion.section>

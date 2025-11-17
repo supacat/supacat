@@ -48,8 +48,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={cn("bg-white font-sans", inter.variable)}>
-        <main className="mx-auto flex max-w-[692px] flex-col gap-8 overflow-x-hidden px-6 py-12 text-gray-1200 antialiased sm:py-32 md:overflow-x-visible md:py-16">
+      <body className={cn("font-sans", inter.variable)}>
+        <main className="h-svh mx-auto flex max-w-[692px] flex-col gap-8 overflow-x-hidden px-6 py-12 text-gray-1200 antialiased sm:py-32 md:overflow-x-visible md:py-16">
           <Header />
           {children}
         </main>
