@@ -37,8 +37,26 @@ export default function Page() {
             className={cn(
               "flex items-start gap-3 rounded-2xl transition-colors hover:bg-gray-100 p-4 -mx-4 group"
             )}
+            href="https://neeed.directory"
+            rel="noopener"
+            target="_blank"
+          >
+
+            <div className="flex flex-1 flex-col gap-y-1 text-sm">
+                  <h3 className="font-medium">
+                    Neeed Directory
+                  </h3>
+                <p className="text-gray-500">The best place to find the best products</p>
+            </div>
+            <ArrowUpRight className="h-5 w-5 shrink-0 opacity-0 group-hover:opacity-100 transition-opacity" />
+          </a>
+
+          <a
+            className={cn(
+              "flex items-start gap-3 rounded-2xl transition-colors hover:bg-gray-100 p-4 -mx-4 group"
+            )}
             href="https://www.uselockin.app"
-            rel="noopener noreferrer"
+            rel="noopener"
             target="_blank"
           >
 
@@ -66,7 +84,7 @@ export default function Page() {
               "flex items-start gap-3 rounded-2xl transition-colors hover:bg-gray-100 p-4 -mx-4 group"
             )}
             href="https://merch.supacat.io"
-            rel="noopener noreferrer"
+            rel="noopener"
             target="_blank"
           >
 
