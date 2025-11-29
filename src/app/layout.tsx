@@ -32,8 +32,8 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Supacat",
     description: `We create software to help people because it's fulfilling and we're passionate about it. We believe that's the best reason to do anything.`,
-    site: "@supacat",
-    creator: "@supacat",
+    site: "@joulsounet",
+    creator: "@joulsounet",
   },
   robots: {
     index: true,
