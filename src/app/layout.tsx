@@ -13,6 +13,13 @@ export const metadata: Metadata = {
     template: "%s | Supacat",
   },
   description: `We create software to help people because it's fulfilling and we're passionate about it. We believe that's the best reason to do anything.`,
+  keywords: ["software", "startup", "studio", "products"],
+  authors: [{ name: "Supacat", url: "https://supacat.io" }],
+  creator: "Supacat",
+  publisher: "Supacat",
+  alternates: {
+    canonical: "https://supacat.io",
+  },
   openGraph: {
     title: "Supacat",
     description: `We create software to help people because it's fulfilling and we're passionate about it. We believe that's the best reason to do anything.`,
@@ -20,6 +27,13 @@ export const metadata: Metadata = {
     siteName: "Supacat",
     locale: "en_US",
     type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Supacat",
+    description: `We create software to help people because it's fulfilling and we're passionate about it. We believe that's the best reason to do anything.`,
+    site: "@supacat",
+    creator: "@supacat",
   },
   robots: {
     index: true,
