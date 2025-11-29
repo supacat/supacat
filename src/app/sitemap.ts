@@ -1,10 +1,12 @@
-export const baseUrl = "https://www.supacat.io";
+import type { MetadataRoute } from "next";
 
-export default async function sitemap() {
-  const routes = [""].map((route) => ({
-    url: `${baseUrl}${route}`,
-    lastModified: new Date().toISOString().split("T")[0],
-  }));
-
-  return [...routes];
+export default function sitemap(): MetadataRoute.Sitemap {
+  return [
+    {
+      url: "https://supacat.io",
+      lastModified: new Date(),
+      changeFrequency: "daily",
+      priority: 1,
+    },
+  ];
 }

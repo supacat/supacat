@@ -8,6 +8,7 @@ export const Header = () => {
           alt="Supacat"
           className="h-40 w-40"
           height={100}
+          loading="eager"
           src="/supacat.svg"
           width={100}
         />

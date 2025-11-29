@@ -1,14 +1,13 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 
-import { baseUrl } from "@/app/sitemap";
 import { Header } from "@/components/header";
 import { cn } from "@/lib/utils";
 
 import "../styles/globals.css";
 
 export const metadata: Metadata = {
-  metadataBase: new URL(baseUrl),
+  metadataBase: new URL("https://supacat.io"),
   title: {
     default: "Supacat",
     template: "%s | Supacat",
@@ -17,7 +16,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Supacat",
     description: `We create software to help people because it's fulfilling and we're passionate about it. We believe that's the best reason to do anything.`,
-    url: baseUrl,
+    url: "https://supacat.io",
     siteName: "Supacat",
     locale: "en_US",
     type: "website",
