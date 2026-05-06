@@ -1,21 +1,26 @@
 import Image from "next/image";
+import Link from "next/link";
 
-export const Header = () => {
+import { ModeToggle } from "@/components/mode-toggle";
+
+export function Header() {
   return (
-    <header className="flex flex-col items-center gap-1">
-      <a className="inline-block font-medium text-medium no-underline" href="/">
+    <header className="flex items-center justify-between">
+      <Link
+        className="inline-flex items-center gap-2 font-medium text-base text-foreground no-underline"
+        href="/"
+      >
         <Image
-          alt="Supacat"
-          className="h-40 w-40"
-          height={100}
+          alt=""
+          className="size-6"
+          height={24}
           loading="eager"
           src="/supacat.svg"
-          width={100}
+          width={24}
         />
-      </a>
-      <a className="inline-block font-medium text-medium no-underline" href="/">
-        Supacat
-      </a>
+        <span>Supacat</span>
+      </Link>
+      <ModeToggle />
     </header>
   );
-};
+}

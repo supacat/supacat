@@ -1,10 +1,15 @@
+import { GeistMono } from "geist/font/mono";
+import { GeistSans } from "geist/font/sans";
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 
 import { Header } from "@/components/header";
+import { ThemeProvider } from "@/components/theme-provider";
 import { cn } from "@/lib/utils";
 
 import "../styles/globals.css";
+
+const DESCRIPTION =
+  "We create software to help people because it's fulfilling and we're passionate about it. We believe that's the best reason to do anything.";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://supacat.io"),
@@ -12,7 +17,7 @@ export const metadata: Metadata = {
     default: "Supacat",
     template: "%s | Supacat",
   },
-  description: `We create software to help people because it's fulfilling and we're passionate about it. We believe that's the best reason to do anything.`,
+  description: DESCRIPTION,
   keywords: ["software", "startup", "studio", "products"],
   authors: [{ name: "Supacat", url: "https://supacat.io" }],
   creator: "Supacat",
@@ -22,7 +27,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: "Supacat",
-    description: `We create software to help people because it's fulfilling and we're passionate about it. We believe that's the best reason to do anything.`,
+    description: DESCRIPTION,
     url: "https://supacat.io",
     siteName: "Supacat",
     locale: "en_US",
@@ -31,7 +36,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Supacat",
-    description: `We create software to help people because it's fulfilling and we're passionate about it. We believe that's the best reason to do anything.`,
+    description: DESCRIPTION,
     site: "@joulsounet",
     creator: "@joulsounet",
   },
@@ -48,24 +53,29 @@ export const metadata: Metadata = {
   },
 };
 
-const inter = Inter({
-  subsets: ["latin"],
-  display: "swap",
-  variable: "--font-inter",
-});
-
 export default function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body className={cn("font-sans", inter.variable)}>
-        <main className="h-svh mx-auto flex max-w-[692px] flex-col gap-8 overflow-x-hidden px-6 py-12 text-gray-1200 antialiased sm:py-32 md:overflow-x-visible md:py-16">
-          <Header />
-          {children}
-        </main>
+    <html
+      className={cn(GeistSans.variable, GeistMono.variable)}
+      lang="en"
+      suppressHydrationWarning
+    >
+      <body>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          disableTransitionOnChange
+          enableSystem
+        >
+          <main className="mx-auto flex min-h-svh max-w-[692px] flex-col gap-12 overflow-x-hidden px-6 py-12 sm:py-16 md:overflow-x-visible md:py-20">
+            <Header />
+            {children}
+          </main>
+        </ThemeProvider>
       </body>
     </html>
   );
