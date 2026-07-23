@@ -6,8 +6,8 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 - Work in the working tree on the current branch (normally `main`). Committing, branching, and pushing are fine when the task calls for it — keep commits scoped, and don't rewrite published history unless explicitly asked.
 - Commit messages are single-line Conventional Commits: `type(scope): summary` — imperative mood, lowercase, no trailing period, ≤72 chars, no body, no footer (enforced by commitlint). Types: feat, fix, docs, style, refactor, perf, test, build, ci, chore, revert. Recommended scopes: content, ui, seo, theme, a11y.
-- After a session that pushed commits, run `pnpm changelog` — it folds the new Conventional Commits into `CHANGELOG.md` and mirrors them to the Obsidian project note — then commit the result as `docs: update changelog`.
-- Run the checks (`pnpm lint`, `pnpm typecheck`, `pnpm build`) before reporting done.
+- After a session that pushed commits, run `bun run changelog` — it folds the new Conventional Commits into `CHANGELOG.md` and mirrors them to the Obsidian project note — then commit the result as `docs: update changelog`.
+- Run the checks (`bun run lint`, `bun run typecheck`, `bun run build`) before reporting done.
 
 ## Scope
 
