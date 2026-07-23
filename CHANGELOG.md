@@ -15,11 +15,13 @@ entries are generated from Conventional Commit messages.
 
 - name the prettier config export
 - format commitlint config
+- reformat with oxfmt
 
 ### Documentation
 
 - rewrite claude.md with trusted-git fleet conventions
 - scaffold keep-a-changelog changelog
+- add readme
 
 ### Maintenance
 
@@ -28,5 +30,8 @@ entries are generated from Conventional Commit messages.
 - add husky, lint-staged, and commitlint
 - widen lint-staged globs to mjs and cjs configs
 - add changelog generator script
+- reset history, start conventional commits
+- replace eslint and prettier with oxlint and oxfmt on bun
+- go hookless, drop husky, lint-staged, and commitlint
 
-<!-- changelog:last-commit 9be2e178e532d1430d763b4177344e3166267628 -->
+<!-- changelog:last-commit c8b500227c3d4e31114a668ddf4a0e81e39d0186 -->
