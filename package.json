@@ -1,0 +1,60 @@
+{
+  "name": "supacat",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "format": "prettier --check .",
+    "format:fix": "prettier --write .",
+    "clean": "git clean -xdf .cache .turbo dist node_modules",
+    "typecheck": "tsc --noEmit --emitDeclarationOnly false",
+    "prepare": "husky",
+    "changelog": "node scripts/changelog.mjs"
+  },
+  "lint-staged": {
+    "*.{js,jsx,mjs,cjs,ts,tsx}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.{json,md,css,mdx}": [
+      "prettier --write"
+    ]
+  },
+  "dependencies": {
+    "clsx": "^2.1.1",
+    "geist": "^1.7.0",
+    "lucide-react": "^1.14.0",
+    "motion": "^12.38.0",
+    "next": "^16.2.4",
+    "next-themes": "^0.4.6",
+    "postcss": "^8.5.14",
+    "react": "19.2.5",
+    "react-dom": "19.2.5",
+    "tailwind-merge": "^3.5.0",
+    "tailwindcss": "4.2.4"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^21.2.1",
+    "@commitlint/config-conventional": "^21.2.0",
+    "@ianvs/prettier-plugin-sort-imports": "^4.7.1",
+    "@tailwindcss/postcss": "^4.2.4",
+    "@types/node": "^25.6.0",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "autoprefixer": "^10.5.0",
+    "eslint": "^9.39.4",
+    "eslint-config-next": "^16.2.10",
+    "eslint-config-prettier": "^10.1.8",
+    "husky": "^9.1.7",
+    "lint-staged": "^17.1.1",
+    "prettier": "^3.9.4",
+    "prettier-plugin-tailwindcss": "^0.7.4",
+    "tailwindcss-animate": "^1.0.7",
+    "typescript": "^6.0.3",
+    "typescript-eslint": "^8.63.0"
+  },
+  "packageManager": "pnpm@10.24.0"
+}
