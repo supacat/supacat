@@ -14,8 +14,7 @@ const VAULT_NOTE =
 const CHANGELOG = "CHANGELOG.md";
 const MARKER = /<!-- changelog:last-commit ([0-9a-f]{7,40}) -->\n?/;
 const SELF = "docs: update changelog";
-const CC =
-  /^(feat|fix|docs|style|refactor|perf|test|build|ci|chore|revert)(\(([^)]+)\))?!?: (.+)$/;
+const CC = /^(feat|fix|docs|style|refactor|perf|test|build|ci|chore|revert)(\(([^)]+)\))?!?: (.+)$/;
 const GROUPS = [
   ["Added", ["feat"]],
   ["Fixed", ["fix"]],
@@ -37,12 +36,7 @@ if (since) {
 }
 
 const head = git("rev-parse", "HEAD");
-const subjects = git(
-  "log",
-  since ? `${since}..HEAD` : "HEAD",
-  "--no-merges",
-  "--pretty=%s"
-)
+const subjects = git("log", since ? `${since}..HEAD` : "HEAD", "--no-merges", "--pretty=%s")
   .split("\n")
   .filter(Boolean)
   .reverse();
@@ -59,58 +53,45 @@ if (entries.length === 0) {
   process.exit(0);
 }
 
-const line = (e) => `- ${e.scope ? `**${e.scope}:** ` : ""}${e.summary}`;
+const line = e => `- ${e.scope ? `**${e.scope}:** ` : ""}${e.summary}`;
 
 let [intro, rest = ""] = changelog.split("## [Unreleased]");
 rest = rest.replace(MARKER, "");
 for (const [title, types] of GROUPS) {
-  const items = entries.filter((e) => types.includes(e.type)).map(line);
+  const items = entries.filter(e => types.includes(e.type)).map(line);
   if (items.length === 0) continue;
   const re = new RegExp(`### ${title}\\n\\n?((?:- .*\\n)*)`);
   const existing = rest.match(re);
   if (existing) {
     const have = new Set(existing[1].split("\n").filter(Boolean));
-    const added = items.filter((i) => !have.has(i));
+    const added = items.filter(i => !have.has(i));
     if (added.length === 0) continue;
-    rest = rest.replace(
-      re,
-      `### ${title}\n\n${existing[1]}${added.join("\n")}\n`
-    );
+    rest = rest.replace(re, `### ${title}\n\n${existing[1]}${added.join("\n")}\n`);
   } else {
     rest = rest.replace(/\n*$/, `\n\n### ${title}\n\n${items.join("\n")}\n`);
   }
 }
 writeFileSync(
   CHANGELOG,
-  `${intro}## [Unreleased]${rest.replace(/\n*$/, "\n")}\n<!-- changelog:last-commit ${head} -->\n`
+  `${intro}## [Unreleased]${rest.replace(/\n*$/, "\n")}\n<!-- changelog:last-commit ${head} -->\n`,
 );
-console.log(
-  `changelog: recorded ${entries.length} ${entries.length === 1 ? "entry" : "entries"}`
-);
+console.log(`changelog: recorded ${entries.length} ${entries.length === 1 ? "entry" : "entries"}`);
 
 if (existsSync(VAULT_NOTE)) {
   const today = new Date().toISOString().slice(0, 10);
   const bullets = entries
-    .map(
-      (e) =>
-        `- ${today} · ${e.type}${e.scope ? `(${e.scope})` : ""}: ${e.summary}`
-    )
+    .map(e => `- ${today} · ${e.type}${e.scope ? `(${e.scope})` : ""}: ${e.summary}`)
     .join("\n");
   let note = readFileSync(VAULT_NOTE, "utf8");
   if (note.includes("## Changelog\n")) {
     note = note.replace("## Changelog\n", `## Changelog\n\n${bullets}\n`);
   } else if (note.includes("## Related")) {
-    note = note.replace(
-      "## Related",
-      `## Changelog\n\n${bullets}\n\n## Related`
-    );
+    note = note.replace("## Related", `## Changelog\n\n${bullets}\n\n## Related`);
   } else {
     note = `${note.replace(/\n*$/, "\n")}\n## Changelog\n\n${bullets}\n`;
   }
   writeFileSync(VAULT_NOTE, note);
   console.log(`changelog: mirrored to ${VAULT_NOTE.split("/").pop()}`);
 } else {
-  console.warn(
-    `changelog: vault note not found, skipped mirror (${VAULT_NOTE})`
-  );
+  console.warn(`changelog: vault note not found, skipped mirror (${VAULT_NOTE})`);
 }

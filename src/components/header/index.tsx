@@ -1,13 +1,12 @@
 import Image from "next/image";
 import Link from "next/link";
-
 import { ModeToggle } from "@/components/mode-toggle";
 
 export function Header() {
   return (
     <header className="flex items-center justify-between">
       <Link
-        className="text-foreground inline-flex items-center gap-2 text-base font-medium no-underline"
+        className="inline-flex items-center gap-2 text-base font-medium text-foreground no-underline"
         href="/"
       >
         <Image

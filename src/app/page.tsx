@@ -7,10 +7,9 @@ export default function Page() {
     <div className="flex flex-col gap-12">
       <h1 className="sr-only">Supacat</h1>
       <Reveal index={0}>
-        <p className="text-foreground leading-relaxed text-pretty">
-          We create software to help people because it&apos;s fulfilling and
-          we&apos;re passionate about it. We believe that&apos;s the best reason
-          to do anything.
+        <p className="leading-relaxed text-pretty text-foreground">
+          We create software to help people because it&apos;s fulfilling and we&apos;re passionate
+          about it. We believe that&apos;s the best reason to do anything.
         </p>
       </Reveal>
 

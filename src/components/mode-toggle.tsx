@@ -32,15 +32,13 @@ export function ModeToggle() {
     setMounted(true);
   }, []);
 
-  const current = (
-    mounted ? (theme ?? "system") : "system"
-  ) as keyof typeof ICON;
+  const current = (mounted ? (theme ?? "system") : "system") as keyof typeof ICON;
   const Icon = ICON[current] ?? Monitor;
 
   return (
     <button
       aria-label={LABEL[current] ?? LABEL.system}
-      className="text-muted-foreground hover:bg-card-hover hover:text-foreground inline-flex size-9 items-center justify-center rounded-md transition-colors duration-150"
+      className="inline-flex size-9 items-center justify-center rounded-md text-muted-foreground transition-colors duration-150 hover:bg-card-hover hover:text-foreground"
       onClick={() => setTheme(NEXT_THEME[current] ?? "system")}
       type="button"
     >

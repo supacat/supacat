@@ -15,12 +15,7 @@ type RevealProps = {
   inView?: boolean;
 };
 
-export function Reveal({
-  children,
-  index = 0,
-  className,
-  inView = false,
-}: RevealProps) {
+export function Reveal({ children, index = 0, className, inView = false }: RevealProps) {
   const reduced = useReducedMotion();
 
   if (reduced) {

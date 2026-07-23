@@ -9,9 +9,7 @@ export function Section({ heading, children }: SectionProps) {
   return (
     <section>
       {heading ? (
-        <h2 className="text-foreground mb-4 text-lg font-medium text-balance">
-          {heading}
-        </h2>
+        <h2 className="mb-4 text-lg font-medium text-balance text-foreground">{heading}</h2>
       ) : null}
       <div>{children}</div>
     </section>
