@@ -1,0 +1,23 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:paco.me)",
+      "Bash(pnpm update:*)",
+      "Bash(pnpm remove:*)",
+      "Bash(pnpm add:*)",
+      "Bash(rm:*)",
+      "Bash(npx:*)",
+      "Bash(pnpm build:*)",
+      "Bash(pnpm dev:*)",
+      "Bash(pnpm lint:fix:*)",
+      "WebFetch(domain:www.ultracite.ai)",
+      "Bash(pnpm dlx:*)",
+      "Bash(pnpm lint:*)",
+      "Bash(curl:*)",
+      "Bash(pkill:*)",
+      "WebFetch(domain:emilkowal.ski)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
