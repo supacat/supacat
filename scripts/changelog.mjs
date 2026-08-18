@@ -2,7 +2,7 @@
 // Folds Conventional Commit subjects since the last recorded run into
 // CHANGELOG.md's "[Unreleased]" groups, and mirrors the new entries into
 // the Obsidian project note. Zero dependencies; run from the repo root:
-// `pnpm changelog`. The last processed commit is tracked via an HTML
+// `bun run changelog`. The last processed commit is tracked via an HTML
 // comment in CHANGELOG.md; if that commit no longer exists (history was
 // reset), the whole history is re-read.
 import { execFileSync } from "node:child_process";

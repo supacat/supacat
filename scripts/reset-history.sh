@@ -34,9 +34,6 @@ if git diff --cached --name-only |
   exit 1
 fi
 
-# --no-verify: pre-commit would run lint-staged over every file in the
-# repo, so any pre-existing lint error would block the reset; the tree is
-# already verified by the normal checks before this script runs.
 git commit --no-verify -m "chore: reset history, start conventional commits"
 git branch -D main
 git branch -m main
