@@ -38,5 +38,10 @@ entries are generated from Conventional Commit messages.
 - reset history, start conventional commits
 - replace eslint and prettier with oxlint and oxfmt on bun
 - go hookless, drop husky, lint-staged, and commitlint
+- drop dead eslint directives and stale tooling comments
 
-<!-- changelog:last-commit ea76ea567af9de36ca942f6521a17b4c2fb7214c -->
+### Fixed
+
+- **content:** correct brand names and resync stale descriptions
+
+<!-- changelog:last-commit f24b4bd77c2bb94d79fcd5cc5901d034212a74f7 -->
