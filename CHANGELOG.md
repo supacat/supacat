@@ -14,6 +14,7 @@ entries are generated from Conventional Commit messages.
 - **ui:** lighten palette and open up section rhythm
 - **ui:** drop the julienducrot.com link from connect
 - **ui:** add shortcutly to projects
+- **ui:** add sunday club and rewrite project descriptions
 
 ### Changed
 
@@ -38,4 +39,4 @@ entries are generated from Conventional Commit messages.
 - replace eslint and prettier with oxlint and oxfmt on bun
 - go hookless, drop husky, lint-staged, and commitlint
 
-<!-- changelog:last-commit 73875df6cd900f958470c459b6b227dfeccaa360 -->
+<!-- changelog:last-commit ea76ea567af9de36ca942f6521a17b4c2fb7214c -->
