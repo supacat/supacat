@@ -22,17 +22,17 @@ export default function Page() {
         <Section heading="Projects">
           <ul>
             <LinkRow
-              description="AI-powered creative studio tools"
+              description="Professional headshots from your own photos"
               href="https://www.mystudios.ai"
               title="My Studios"
             />
             <LinkRow
-              description="The best place to find the best products"
+              description="Browse tools for makers by category"
               href="https://neeed.directory"
               title="Neeed Directory"
             />
             <LinkRow
-              description="Track daily habits with lock-in challenges and maintain your streaks"
+              description="Commit to one goal with no days off"
               href="https://www.uselockin.app"
               title="Lock In"
             />
@@ -40,6 +40,11 @@ export default function Page() {
               description="Discover and share Apple Shortcuts"
               href="https://www.shortcutly.com"
               title="Shortcutly"
+            />
+            <LinkRow
+              description="New products picked by hand every Monday"
+              href="https://sundayclub.so"
+              title="Sunday Club"
             />
           </ul>
         </Section>
