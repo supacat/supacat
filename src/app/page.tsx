@@ -24,7 +24,7 @@ export default function Page() {
             <LinkRow
               description="Professional headshots from your own photos"
               href="https://www.mystudios.ai"
-              title="My Studios"
+              title="MyStudios"
             />
             <LinkRow
               description="Browse tools for makers by category"

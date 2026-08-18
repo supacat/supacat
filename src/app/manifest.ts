@@ -2,7 +2,7 @@ import type { MetadataRoute } from "next";
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: "Supacat - We create software to help people because it's fulfilling and we're passionate about it. We believe that's the best reason to do anything.",
+    name: "Supacat",
     short_name: "Supacat",
     description:
       "We create software to help people because it's fulfilling and we're passionate about it. We believe that's the best reason to do anything.",

@@ -1,6 +1,6 @@
 # Supacat
 
-[supacat.io](https://supacat.io) — the marketing site for Supacat, a software studio. A single page introducing the studio and linking out to its projects (My Studios, Neeed Directory, Lock In), merch, and contact.
+[supacat.io](https://supacat.io) — the marketing site for Supacat, a startup studio. A single page introducing the studio and linking out to its projects (MyStudios, Neeed Directory, Lock In, Shortcutly, Sunday Club), merch, and contact.
 
 ## Static by design
 
