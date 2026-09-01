@@ -16,3 +16,10 @@ This file is the only agent handbook for this repository. `CLAUDE.md` just forwa
 ## Code comments
 
 - Comments explain what and why, in present tense, describing the code as it is now. Never reference the development process — no "migration", "PR", "legacy"/"new", "we", or "for now". A comment that becomes false once the change is no longer recent is wrong — rewrite it.
+
+## Unslop
+
+- Smallest diff that still behaves the same
+- No new helpers, layers, or "just in case" branches
+- Comments only when they explain a non-obvious why
+- Ads, billing, consent, streak rules are product law — do not "clean" them into something nicer
