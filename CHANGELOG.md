@@ -29,6 +29,7 @@ entries are generated from Conventional Commit messages.
 - add readme
 - replace claude.md with a root agents.md
 - add the unslop rules to the agent handbook
+- require branches and pull requests like sunday
 
 ### Maintenance
 
@@ -46,4 +47,4 @@ entries are generated from Conventional Commit messages.
 
 - **content:** correct brand names and resync stale descriptions
 
-<!-- changelog:last-commit 5c3a8d3e646a235d0add63336534100894849fb9 -->
+<!-- changelog:last-commit bd5c9baf1f9a7720f23275aa704db0fea5f94abf -->
