@@ -47,4 +47,4 @@ Run `bun run lint`, `bun run typecheck`, and `bun run build` before considering 
 
 ## Conventions
 
-Commits are single-line [Conventional Commits](https://www.conventionalcommits.org) (`type(scope): summary`). There are no git hooks — conventions live in [CLAUDE.md](CLAUDE.md).
+Commits are single-line [Conventional Commits](https://www.conventionalcommits.org) (`type(scope): summary`). There are no git hooks — conventions live in [AGENTS.md](AGENTS.md).
