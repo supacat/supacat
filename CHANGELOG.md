@@ -27,6 +27,7 @@ entries are generated from Conventional Commit messages.
 - rewrite claude.md with trusted-git fleet conventions
 - scaffold keep-a-changelog changelog
 - add readme
+- replace claude.md with a root agents.md
 
 ### Maintenance
 
@@ -44,4 +45,4 @@ entries are generated from Conventional Commit messages.
 
 - **content:** correct brand names and resync stale descriptions
 
-<!-- changelog:last-commit f24b4bd77c2bb94d79fcd5cc5901d034212a74f7 -->
+<!-- changelog:last-commit d7cbc0fafff73d658db78afa6199afe0e3df92e5 -->
