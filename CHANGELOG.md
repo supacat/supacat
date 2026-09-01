@@ -28,6 +28,7 @@ entries are generated from Conventional Commit messages.
 - scaffold keep-a-changelog changelog
 - add readme
 - replace claude.md with a root agents.md
+- add the unslop rules to the agent handbook
 
 ### Maintenance
 
@@ -45,4 +46,4 @@ entries are generated from Conventional Commit messages.
 
 - **content:** correct brand names and resync stale descriptions
 
-<!-- changelog:last-commit d7cbc0fafff73d658db78afa6199afe0e3df92e5 -->
+<!-- changelog:last-commit 5c3a8d3e646a235d0add63336534100894849fb9 -->
